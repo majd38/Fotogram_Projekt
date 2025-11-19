@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./java.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav>
+        <img class="siteLogo" src="./logo/Fotogram_Logo.svg" alt="siteLogo">
+    </nav>
+    <Main>
+        <h1>
+            Your personal photo album
+        </h1>
+        <Section aria-label="Photo Albums">
+            <div id="album1" class="album1"  aria-label="Open album 1"></div>
+            <div id="album2" class="album2"  aria-label="Open album 2"></div>
+            <div id="album3" class="album3"  aria-label="Open album 3"></div>
+            <div id="album4" class="album4"  aria-label="Open album 4"> </div>
+                      
+            
+
+
+            <dialog  id="album1_dialog" class="albumDialog1">
+                <header>
+                    <h2 id="imgTitles"></h2>
+                    <button class="closeDialog">x</button>
+                </header>
+                <div id="imgDisplayer"></div>
+                <footer>
+                    <button id="arrowLeft" class="nextImgLeft" aria-label="Previous image">←</button>
+                    <p id="imgNav">1/4</p>
+                    <button id="arrowRight" class="nextImgRight" aria-label="Next image">→</button>
+                </footer>
+
+            </dialog>
+
+        </Section>
+    </Main>
+<footer class="bodyFooter">
+<img src="./favicon/favicon.png" alt="footerLogo">
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #2F2F2F;
+
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background: linear-gradient(to bottom, #0f0a3c, #2F2F2F);
+
+}
+
+.siteLogo{
+    height: 90px;
+    width: 250px;
+    padding-left: 30px;
+}
+
+
+h1 {
+    margin-top: 100px;
+    justify-self: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #f0f0f0;
+
+}
+
+section {
+    width: 1300px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+
+}
+
+.album1,
+.album2,
+.album3,
+.album4 {
+    height: 170px;
+    width: 170px;
+    border-radius: 10px;
+    perspective: 1000px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.album1 {
+    background-image: url(./album_cover_img/animal-9747276_1280.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.album2 {
+    background-image: url(./album_cover_img/antelope-canyon-9391418_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.album3 {
+    background-image: url(./album_cover_img/architecture-9827472_1280.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.album4 {
+    background-image: url(./album_cover_img/bridge-9620082_640.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.album1:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.album2:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.album3:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.album4:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.albumDialog1 {
+    height: 600px;
+    width: 400px;
+    padding: 0;
+    background-color: #2F2F2F;
+    border-radius: 18px;
+    border: 2px solid rgba(67, 97, 238, 0.7);
+    box-shadow:
+        0 0 20px rgba(67, 97, 238, 0.6),
+        0 0 40px rgba(58, 12, 163, 0.3);
+    animation: dialog-pop 0.3s ease;
+
+}
+
+.albumDialog1::backdrop {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.45);
+
+}
+
+.albumDialog1 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+}
+
+
+.closeDialog {
+    height: 27px;
+    width: 27px;
+    background: linear-gradient(135deg, #3A0CA3, #4361EE);
+    border-radius: 4px;
+    color: #F7F3E9;
+    transition: 0.3s ease;
+    border: none;
+
+}
+
+.albumDialog1 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 83px;
+    gap: 20px;
+
+
+}
+
+.albumDialog1 div {
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#imgDisplayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgDisplayer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.nextImgLeft {
+    background: linear-gradient(135deg, #3A0CA3, #4361EE);
+    border-radius: 4px;
+    color: #F7F3E9;
+    transition: 0.3s ease;
+    border: none;
+    height: 22px;
+    width: 35px;
+
+
+}
+
+.nextImgRight {
+    background: linear-gradient(135deg, #3A0CA3, #4361EE);
+    border-radius: 4px;
+    color: #F7F3E9;
+    transition: 0.3s ease;
+    border: none;
+    height: 22px;
+    width: 35px;
+}
+
+.nextImgRight:hover {
+    filter: brightness(1.15);
+    transform: translateY(-0.7px);
+}
+
+.nextImgLeft:hover {
+    filter: brightness(1.15);
+    transform: translateY(-0.7px);
+}
+
+.closeDialog:hover {
+    filter: brightness(1.15);
+    transform: translateY(-0.7px);
+}
+
+.bodyFooter {
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, #0f0a3c, #2F2F2F);
+
+
+}
+
+.bodyFooter img {
+    height: 90px;
+    margin-bottom: 20px;
+
+}
+
+@media (max-width: 1440px) {
+section {
+    width: 1000px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+
+}
+}
+
+@media (max-width: 1080px) {
+section {
+    width: 700px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+
+}
+}
+
+@media (max-width: 750px) {
+section {
+    width: 500px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+}
+
+.siteLogo {
+    height: 90px;
+    width: 170px;
+    padding-left: 30px;
+}
+h1 {
+    margin-top: 100px;
+    justify-self: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #f0f0f0;
+
+}
+}
+
+@media (max-width: 550px) {
+section {
+    width: 200px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+
+}
+nav{
+    justify-content: center;
+}
+.siteLogo {
+    height: 90px;
+    width: 130px;
+    padding-left: 0;
+}
+section{
+    column-gap: 0;
+    row-gap: 20px;
+    justify-content: center;
+}
+}
+
+@media (max-width: 450px){
+    .siteLogo {
+    height: 90px;
+    width: 80px;
+        padding-left: 0;
+
+}
+h1 {
+    margin-top: 100px;
+    justify-self: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #f0f0f0;
+
+}
+}
+
+
+
