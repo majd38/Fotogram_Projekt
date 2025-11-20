@@ -66,12 +66,19 @@ const albums = {
 };
 
 
+
+
 document.querySelectorAll("section div").forEach(albumDiv => {
     albumDiv.addEventListener("click", () => {
         openAlbum(albumDiv.id);
     });
 });
 
+dialog1.addEventListener("click", (event) => {
+    if (event.target === dialog1) {
+        dialog1.close();
+    }
+});
 
 
 
@@ -106,6 +113,7 @@ function updateDialog() {
     imgTitle.textContent =
         currentAlbum.titles[currentIndex];
 }
+
 
 
 

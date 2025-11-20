@@ -59,25 +59,25 @@ section {
 }
 
 .album1 {
-    background-image: url(./album_cover_img/animal-9747276_1280.webp);
+    background-image: url(./album1_img/canyon-9765223_640.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .album2 {
-    background-image: url(./album_cover_img/antelope-canyon-9391418_1280.jpg);
+    background-image: url(./album2_img/iceberg-9729316_640.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .album3 {
-    background-image: url(./album_cover_img/architecture-9827472_1280.webp);
+    background-image: url(./album1_img/canyon-9765223_640.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .album4 {
-    background-image: url(./album_cover_img/bridge-9620082_640.jpg);
+    background-image: url(./album2_img/iceberg-9729316_640.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -251,6 +251,10 @@ section {
     justify-self: center;
 
 }
+
+.bodyFooter{
+    margin-top: 300px;
+}
 }
 
 @media (max-width: 750px) {
@@ -301,7 +305,7 @@ nav{
 }
 section{
     column-gap: 0;
-    row-gap: 20px;
+    row-gap: 40px;
     justify-content: center;
 }
 }
@@ -312,6 +316,12 @@ section{
     width: 80px;
         padding-left: 0;
 
+}
+section{
+    margin-top: 180px;
+    column-gap: 0;
+    row-gap: 50px;
+    justify-content: center;
 }
 h1 {
     margin-top: 100px;
