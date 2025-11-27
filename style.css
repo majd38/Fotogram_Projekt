@@ -221,7 +221,7 @@ section {
 }
 
 .bodyFooter {
-    margin-top: auto;
+    margin-top: 400px;
     display: flex;
     justify-content: center;
     background: linear-gradient(to top, #0f0a3c, #2F2F2F);
