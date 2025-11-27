@@ -36,7 +36,7 @@ const album2Titles = ["Iceberg16", "Iceberg18", "iguanaphotography", "netherland
 const album3Titles = ["Canyon", "Cave", "Crocodile", "Irish Setter"];
 const album4Titles = ["Iceberg16", "Iceberg18", "iguanaphotography", "netherlands"];
 
-
+let currentAlbumId = null;
 let currentAlbum = null;
 let currentIndex = 0;
 const dialog1 = document.getElementById("album1_dialog");
@@ -55,7 +55,7 @@ const albums = {
         imgs: album2Imgs,
         titles: album2Titles
     },
-     album3: {
+    album3: {
         imgs: album3Imgs,
         titles: album3Titles
     },
@@ -76,14 +76,15 @@ document.querySelectorAll("section div").forEach(albumDiv => {
 
 dialog1.addEventListener("click", (event) => {
     if (event.target === dialog1) {
-        dialog1.close();
+        closeDialogAndUpdateBackground();
+
     }
 });
 
 
 
 closeBtn.addEventListener("click", function () {
-    dialog1.close();
+    closeDialogAndUpdateBackground();
 });
 
 arrowLeft.addEventListener("click", () => {
@@ -97,11 +98,18 @@ arrowRight.addEventListener("click", () => {
 });
 function openAlbum(id) {
     currentAlbum = albums[id];
-    currentIndex = 0;
+    currentAlbumId = id;
+
+    if (currentAlbum.lastIndex !== undefined) {
+        currentIndex = currentAlbum.lastIndex;
+    } else {
+        currentIndex = 0;
+    }
 
     dialog1.showModal();
     updateDialog();
 }
+
 
 function updateDialog() {
     imgDisplayer.innerHTML =
@@ -114,6 +122,34 @@ function updateDialog() {
         currentAlbum.titles[currentIndex];
 }
 
+
+
+function albumBackgrounds(albumId, imageUrl) {
+    const albumDiv = document.getElementById(albumId);
+
+    if (!albumDiv) return;
+
+    albumDiv.style.backgroundImage = `url("${imageUrl}")`;
+    albumDiv.style.backgroundSize = "cover";
+    albumDiv.style.backgroundPosition = "center";
+}
+
+
+function getCurrentImageUrl() {
+    return currentAlbum?.imgs[currentIndex];
+}
+
+function closeDialogAndUpdateBackground() {
+    if (currentAlbumId && currentAlbum) {
+
+        currentAlbum.lastIndex = currentIndex;
+
+        const lastImage = getCurrentImageUrl();
+        albumBackgrounds(currentAlbumId, lastImage);
+    }
+
+    dialog1.close();
+}
 
 
 

@@ -3,6 +3,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #2F2F2F;
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -107,7 +110,7 @@ section {
 }
 
 .albumDialog1 {
-    height: 600px;
+    max-height: 90vh;
     width: 400px;
     padding: 0;
     background-color: #2F2F2F;
@@ -218,7 +221,7 @@ section {
 }
 
 .bodyFooter {
-    margin-top: 500px;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     background: linear-gradient(to top, #0f0a3c, #2F2F2F);
